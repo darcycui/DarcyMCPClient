@@ -1,0 +1,13 @@
+[project]
+name = "DarcyMCPClient"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.84.0",
+    "mcp>=1.26.0",
+    "python-dotenv>=1.2.2",
+    "read>=0.0.2",
+    "requests>=2.32.5",
+]
