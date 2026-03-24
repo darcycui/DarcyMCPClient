@@ -6,14 +6,13 @@ from mcp_client import MCPClient
 
 def init_client() -> MCPClient:
     """创建客户端实例"""
-    client = MCPClient()
+    client = MCPClient(server_command="uvx", server_args=["darcycui-mcp"])
     return client
 
 
 async def run_client():
     """运行客户端"""
-    """运行客户端"""
-    client = MCPClient()
+    client = init_client()
     try:
         print("连接 MCP 服务器...")
         await client.connect()

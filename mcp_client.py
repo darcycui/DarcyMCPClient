@@ -3,22 +3,14 @@ from typing import Optional
 
 from mcp import ClientSession, StdioServerParameters, stdio_client
 
-MCP_SERVER_FOLDER = r"D:\Projectss\AI\DarcyMCP\DarcyMCPServer"
-MCP_SERVER_FILE = r"weather.py"
-
 
 class MCPClient:
-    def __init__(self):
+    def __init__(self, server_command: str, server_args: list):
         """
         初始化 MCP 客户端
         """
-        self.server_command = "uv"
-        self.server_args = [
-            "--directory",
-            MCP_SERVER_FOLDER,
-            "run",
-            MCP_SERVER_FILE
-        ]
+        self.server_command = server_command
+        self.server_args = server_args
         self.session: Optional[ClientSession] = None
         self.stdio_context = None
         self.reader = None
